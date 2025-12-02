@@ -20,12 +20,7 @@ pygame                    2.5.2
 scikit-learn              1.4.1.post1 
 scipy                     1.12.0 
 
-<details>
   <summary>Tab 1</summary>
-
-Contenido del tab 1.
-
-</details>
 
 ## 2. Build
 
