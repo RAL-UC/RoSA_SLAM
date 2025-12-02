@@ -28,5 +28,9 @@ This repository contains a Python-based Robust SLAM for Arboreal environments, c
 
 ## 3. Example
 
+<p align="center">
+  <img src="pictures/Robust-Navigation-in-Arboreal-Environments.gif" width="70%">
+</p>
+
 ## 4. Cite
 Nazate-Burgos, P., Torres-Torriti, M., Aguilera-Marinovic, S., Arévalo, T., Huang, S., & Auat Cheein, F. (2025). Robust 2D lidar-based SLAM in arboreal environments without IMU/GNSS. arXiv. arXiv:2505.10847.
