@@ -20,7 +20,24 @@ pygame                    2.5.2
 scikit-learn              1.4.1.post1 
 scipy                     1.12.0 
 
-  <summary>Tab 1</summary>
+| Paquete         | Versión        |
+|-----------------|----------------|
+| fonttools       | 4.49.0         |
+| ipython         | 8.23.0         |
+| jupyter_client  | 8.6.1          |
+| jupyter_core    | 5.7.2          |
+| matplotlib      | 3.8.3          |
+| matplotlib-inline | 0.1.7        |
+| numba           | 0.59.1         |
+| numpy           | 1.26.4         |
+| open3d          | 0.18.0         |
+| opencv-python   | 4.9.0.80       |
+| pandas          | 2.2.1          |
+| pygame          | 2.5.2          |
+| scikit-learn    | 1.4.1.post1    |
+| scipy           | 1.12.0         |
+| Python          | 3.10.11        |
+
 
 ## 2. Build
 
