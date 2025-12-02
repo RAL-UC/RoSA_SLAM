@@ -6,8 +6,9 @@ This repository contains a Python-based Robust SLAM for Arboreal environments, c
 </p>
 
 ## 1. Dependency
+The algorithm was tested with the following Python version and libraries:
 
-| Paquete         | Versión        |
+| Package         | Version        |
 |-----------------|----------------|
 | Python          | 3.10.11        |
 | fonttools       | 4.49.0         |
