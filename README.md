@@ -58,7 +58,7 @@ Clone the repository and catkin_make:
     cd ../
     catkin_make
     source ~/catkin_ws/devel/setup.bash
-
+    ```
 
 ## 3. Project Structure
 
@@ -84,6 +84,7 @@ Download the dataset from Link_to_pullally_dataset and store it in YOUR_DATASET_
     roscore
     roslaunch path_publisher cloud_pose_mapper.launch
     rosbag play data_pullally_example.bag
+    ```
 
 <p align="center">
   <img src="pictures/Robust-Navigation-in-Arboreal-Environments.gif" width="70%">
