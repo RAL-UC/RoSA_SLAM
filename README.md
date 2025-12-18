@@ -80,7 +80,7 @@ source ~/catkin_ws/devel/setup.bash
 
 ## 4. Example
 
-To run the Python code, use the 
+To run the Python code, use:
 ```text
 example_pullally.ipynb
 ```
