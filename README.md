@@ -50,16 +50,24 @@ Prerequisites:
 - ROS Melodic (desktop-full)
 
 Clone the repository and catkin_make:
-    ```bash
-    git clone https://github.com/RAL-UC/RoSA_SLAM.git
-    cd path/RoSA_SLAM/path_publisher
-    cp -r path_publisher ~/catkin_ws/src
-    cd ~/catkin_ws/src
-    cd ../
-    catkin_make
-    source ~/catkin_ws/devel/setup.bash
-    ```
+```bash
+git clone https://github.com/RAL-UC/RoSA_SLAM.git
+cd path/RoSA_SLAM/path_publisher
+cp -r path_publisher ~/catkin_ws/src
+cd ~/catkin_ws/src
+cd ../
+catkin_make
+source ~/catkin_ws/devel/setup.bash
+```
 
+
+```bash
+cd ~/catkin_ws/src
+git clone https://github.com/HKUST-Aerial-Robotics/A-LOAM.git
+cd ..
+catkin_make
+source ~/catkin_ws/devel/setup.bash
+```
 ## 3. Project Structure
 
 ├── data/                     # input datasets
@@ -80,11 +88,11 @@ Clone the repository and catkin_make:
 To run the Python code, use the example_pullally.ipynb 
 
 Download the dataset from Link_to_pullally_dataset and store it in YOUR_DATASET_FOLDER.
-    ```bash
-    roscore
-    roslaunch path_publisher cloud_pose_mapper.launch
-    rosbag play data_pullally_example.bag
-    ```
+```bash
+roscore
+roslaunch path_publisher cloud_pose_mapper.launch
+rosbag play data_pullally_example.bag
+```
 
 <p align="center">
   <img src="pictures/Robust-Navigation-in-Arboreal-Environments.gif" width="70%">
