@@ -80,7 +80,10 @@ source ~/catkin_ws/devel/setup.bash
 
 ## 4. Example
 
-To run the Python code, use the example_pullally.ipynb 
+To run the Python code, use the 
+```text
+example_pullally.ipynb
+```
 
 Download the dataset from Link_to_pullally_dataset and store it in YOUR_DATASET_FOLDER.
 ```bash
