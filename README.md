@@ -60,28 +60,21 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
 
-
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/HKUST-Aerial-Robotics/A-LOAM.git
-cd ..
-catkin_make
-source ~/catkin_ws/devel/setup.bash
-```
 ## 3. Project Structure
 
-├── data/                     # input datasets
-├── path_publisher/           # Ros package
-    ├── launch/               # launch control
-    ├── rviz/                 # configuration
-    ├── src/                  # source code
-├── pullally_example/         # python code
-    ├── EKF/                  # functions of ekf an robot model
-    ├── hausdorff/            # matching
-    ├── utils/                # manage screen and variables
-├── example_pullally.ipynb    # output files and figures
+```text
+├── data/                      # Input datasets
+├── path_publisher/            # ROS package
+│   ├── launch/                # Launch files
+│   ├── rviz/                  # RViz configuration
+│   └── src/                   # Source code
+├── pullally_example/          # Python code
+│   ├── EKF/                   # EKF and robot model functions
+│   ├── hausdorff/             # Trajectory matching
+│   └── utils/                 # Screen and variable utilities
+├── example_pullally.ipynb     # Output files and figures
 └── README.md
-
+```
 
 ## 4. Example
 
