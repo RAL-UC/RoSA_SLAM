@@ -63,16 +63,18 @@ source ~/catkin_ws/devel/setup.bash
 ## 3. Project Structure
 
 ```text
-├── data/                      # Input datasets
-├── path_publisher/            # ROS package
-│   ├── launch/                # Launch files
-│   ├── rviz/                  # RViz configuration
-│   └── src/                   # Source code
-├── pullally_example/          # Python code
-│   ├── EKF/                   # EKF and robot model functions
-│   ├── hausdorff/             # Trajectory matching
-│   └── utils/                 # Screen and variable utilities
-├── example_pullally.ipynb     # Output files and figures
+├── data/                        # Input dataset
+├── path_publisher/              # ROS package
+│   ├── launch/                  # Launch files
+│   ├── rviz/                    # RViz configuration
+│   └── src/                     # Source code
+├── pictures/                    # imagens of readme
+├── pullally_example/            # Python code
+│   ├── EKF/                     # EKF and robot model functions
+│   ├── hausdorff/               # Trajectory matching
+│   ├── utils/                   # Screen and variable utilities
+│   └── example_pullally.ipynb   # Main example with output files and figures
+├── results_evaluation.ipynb     # Output files and figures of some datasets
 └── README.md
 ```
 
@@ -88,7 +90,7 @@ rosbag play data_pullally_example.bag
 ```
 
 <p align="center">
-  <img src="pictures/Robust-Navigation-in-Arboreal-Environments.gif" width="70%">
+  <img src="pictures/map_ros.gif" width="70%">
 </p>
 
     
