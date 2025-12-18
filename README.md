@@ -6,32 +6,89 @@ This repository contains a Python-based Robust SLAM for Arboreal environments, c
 </p>
 
 ## 1. Dependency
-The algorithm was tested with the following Python version and libraries:
 
+The algorithm was tested with:
+
+Operating System:   Ubuntu 18.04 LTS  
+Architecture:       x86_64
+ROS Distribution:   ROS Melodic
+
+System & ROS Dependencies
+| Component     | Version / Notes     |
+| ------------- | ------------------- |
+| ROS           | Melodic             |
+| roscpp        | ROS Melodic default |
+| rospy         | ROS Melodic default |
+| tf / tf2      | ROS Melodic default |
+| sensor_msgs   | ROS Melodic default |
+| geometry_msgs | ROS Melodic default |
+
+Python Dependencies
 | Package         | Version        |
 |-----------------|----------------|
-| Python          | 3.10.11        |
-| fonttools       | 4.49.0         |
-| ipython         | 8.23.0         |
-| jupyter_client  | 8.6.1          |
-| jupyter_core    | 5.7.2          |
-| matplotlib      | 3.8.3          |
-| matplotlib-inline | 0.1.7        |
-| numba           | 0.59.1         |
-| numpy           | 1.26.4         |
+| Python          | 3.8.3          |
+| fonttools       | 4.44.0         |
+| ipython         | 8.12.3         |
+| jupyter_client  | 8.6.0          |
+| jupyter_core    | 5.5.0          |
+| matplotlib      | 3.7.3          |
+| matplotlib-inline | 0.1.6        |
+| numba           | 0.58.1         |
+| numpy           | 1.24.4         |
 | open3d          | 0.18.0         |
-| opencv-python   | 4.9.0.80       |
-| pandas          | 2.2.1          |
-| pygame          | 2.5.2          |
-| scikit-learn    | 1.4.1.post1    |
-| scipy           | 1.12.0         |
+| opencv-python   | 4.8.1.78       |
+| rosbag          | 1.14.13        |
+| rospy           | 1.14.13        |
+| scikit-learn    | 1.3.2          |
+| scipy           | 1.10.1         |
 
 
 ## 2. Build
 
-## 3. Example
+Prerequisites:
+- Ubuntu 18.04 LTS
+- ROS Melodic (desktop-full)
+
+Clone the repository and catkin_make:
+    ```bash
+    git clone https://github.com/RAL-UC/RoSA_SLAM.git
+    cd path/RoSA_SLAM/path_publisher
+    cp -r path_publisher ~/catkin_ws/src
+    cd ~/catkin_ws/src
+    cd ../
+    catkin_make
+    source ~/catkin_ws/devel/setup.bash
 
 
+## 3. Project Structure
 
-## 4. Cite
+├── data/                     # input datasets
+├── path_publisher/           # Ros package
+    ├── launch/               # launch control
+    ├── rviz/                 # configuration
+    ├── src/                  # source code
+├── pullally_example/         # python code
+    ├── EKF/                  # functions of ekf an robot model
+    ├── hausdorff/            # matching
+    ├── utils/                # manage screen and variables
+├── example_pullally.ipynb    # output files and figures
+└── README.md
+
+
+## 4. Example
+
+To run the Python code, use the example_pullally.ipynb 
+
+Download the dataset from Link_to_pullally_dataset and store it in YOUR_DATASET_FOLDER.
+    ```bash
+    roscore
+    roslaunch path_publisher cloud_pose_mapper.launch
+    rosbag play data_pullally_example.bag
+
+<p align="center">
+  <img src="pictures/Robust-Navigation-in-Arboreal-Environments.gif" width="70%">
+</p>
+
+    
+## 5. Cite
 Nazate-Burgos, P., Torres-Torriti, M., Aguilera-Marinovic, S., Arévalo, T., Huang, S., & Auat Cheein, F. (2025). Robust 2D lidar-based SLAM in arboreal environments without IMU/GNSS. arXiv. arXiv:2505.10847.
