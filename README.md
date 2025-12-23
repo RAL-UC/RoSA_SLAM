@@ -85,7 +85,7 @@ To run the Python code, use:
 example_pullally.ipynb
 ```
 
-Download the dataset from Link_to_pullally_dataset and store it in YOUR_DATASET_FOLDER.
+Download the dataset from [Rosbag data_pullally_example.bag](https://uccl0-my.sharepoint.com/:f:/r/personal/mtorreto_uc_cl/Documents/Datasets/Pullally_Dataset/Pullally_dataset/Pullally_20230806/data_example4RoSA_SLAM?csf=1&web=1&e=vAS1UE)  of [Pullally Dataset](https://github.com/RAL-UC/RoSA_SLAM) and store it in YOUR_DATASET_FOLDER.
 ```bash
 roscore
 roslaunch path_publisher cloud_pose_mapper.launch
