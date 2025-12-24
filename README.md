@@ -95,6 +95,31 @@ rosbag play data_pullally_example.bag
   <img src="pictures/map_ros.gif" width="70%">
 </p>
 
-    
+
+## 4. Docker
+
+Prerequisites
+
+Docker (v20+ recommended)
+
+Dowload the Docker Image from [Docker_RoSA](https://uccl0-my.sharepoint.com/:f:/r/personal/mtorreto_uc_cl/Documents/Datasets/Pullally_Dataset/Pullally_dataset/Pullally_20230806/Docker_image?csf=1&web=1&e=KNR88x)  
+and load it on the destination computer:
+
+```bash
+docker load < ros-melodic-18_RoSA.tar
+```
+
+After obtaining the image, initiate the container using the following command:
+
+```bash
+docker run -it \
+  --env DISPLAY=$DISPLAY \
+  --env QT_X11_NO_MITSHM=1 \
+  --volume /tmp/.X11-unix:/tmp/.X11-unix:rw \
+  --net=host \
+  -v /home/paonazate/dataset_pullally:/data/rosbags:ro \
+  ros-melodic:18.04
+```
+
 ## 5. Cite
 Nazate-Burgos, P., Torres-Torriti, M., Aguilera-Marinovic, S., Arévalo, T., Huang, S., & Auat Cheein, F. (2025). Robust 2D lidar-based SLAM in arboreal environments without IMU/GNSS. arXiv. arXiv:2505.10847.
