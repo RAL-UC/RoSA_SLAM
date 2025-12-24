@@ -96,7 +96,7 @@ rosbag play data_pullally_example.bag
 </p>
 
 
-## 4. Docker
+## 5. Docker
 
 Prerequisites
 
@@ -121,5 +121,5 @@ docker run -it \
   ros-melodic:18.04
 ```
 
-## 5. Cite
+## 6. Cite
 Nazate-Burgos, P., Torres-Torriti, M., Aguilera-Marinovic, S., Arévalo, T., Huang, S., & Auat Cheein, F. (2025). Robust 2D lidar-based SLAM in arboreal environments without IMU/GNSS. arXiv. arXiv:2505.10847.
