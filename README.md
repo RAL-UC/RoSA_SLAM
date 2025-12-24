@@ -52,10 +52,9 @@ Prerequisites:
 Clone the repository and catkin_make:
 ```bash
 git clone https://github.com/RAL-UC/RoSA_SLAM.git
-cd path/RoSA_SLAM/path_publisher
+cd RoSA_SLAM/
 cp -r path_publisher ~/catkin_ws/src
-cd ~/catkin_ws/src
-cd ../
+cd ~/catkin_ws
 catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
