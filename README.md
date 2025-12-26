@@ -47,7 +47,7 @@ Python Dependencies
 
 Prerequisites:
 - Ubuntu 18.04 LTS
-- ROS Melodic (desktop-full)
+- ROS Melodic (desktop-full) or melodic-ros-base with pcl_ros and pcl_conversions
 
 Clone the repository and catkin_make:
 ```bash
@@ -98,27 +98,61 @@ rosbag play data_pullally_example.bag
 
 ## 5. Docker
 
-Prerequisites
+Prerequisites:
 
-Docker (v20+ recommended)
+- Docker (v20+ recommended)
 
-Dowload the Docker Image from [Docker_RoSA](https://uccl0-my.sharepoint.com/:f:/r/personal/mtorreto_uc_cl/Documents/Datasets/Pullally_Dataset/Pullally_dataset/Pullally_20230806/Docker_image?csf=1&web=1&e=KNR88x)  
-and load it on the destination computer:
+Dowload the Docker Image from [Docker_RoSA](https://uccl0-my.sharepoint.com/:f:/r/personal/mtorreto_uc_cl/Documents/Datasets/Pullally_Dataset/Pullally_dataset/Pullally_20230806/Docker_image?csf=1&web=1&e=KNR88x), and load it on the destination computer:
+
+Terminal 1:
 
 ```bash
 docker load < ros-melodic-18_RoSA.tar
 ```
+After loading the Docker image, start the container using the commands below.
 
-After obtaining the image, initiate the container using the following command:
+- Replace <PATH_ROSBAG_IN_YOUR_PC> with the absolute path to the directory on your machine that contains the rosbag files.
+For example: /home/dataset_pullally.
+
+- Execute the following commands:
 
 ```bash
+xhost +local:docker
 docker run -it \
   --env DISPLAY=$DISPLAY \
   --env QT_X11_NO_MITSHM=1 \
   --volume /tmp/.X11-unix:/tmp/.X11-unix:rw \
   --net=host \
-  -v /home/paonazate/dataset_pullally:/data/rosbags:ro \
+  -v /<PATH_ROSBAG_IN_YOUR_PC>:/data/rosbags:ro \
   ros-melodic:18.04
+roscore
+```
+
+The rosbag directory will be mounted inside the container at /data/rosbags in read-only mode.
+
+Terminal 2:
+Identify the running container:
+```bash
+docker ps
+```
+
+- Replace <YOUR_CONTAINER> with the id in your machine. For example: 0f59b1840653.
+
+- Source the ROS environment and launch the application:
+
+```bash
+docker exec -it <YOUR_CONTAINER> /bin/bash
+source /opt/ros/melodic/setup.bash
+roslaunch path_publisher cloud_pose_mapper.launch
+```
+
+Terminal 3:
+
+- Attach to the same container and play the rosbag file:
+
+```bash
+docker exec -it <YOUR_CONTAINER> /bin/bash
+rosbag play data_pullally_example.bag
 ```
 
 ## 6. Cite
