@@ -130,7 +130,9 @@ roscore
 
 The rosbag directory will be mounted inside the container at /data/rosbags in read-only mode.
 
+
 Terminal 2:
+
 Identify the running container:
 ```bash
 docker ps
@@ -145,6 +147,7 @@ docker exec -it <YOUR_CONTAINER> /bin/bash
 source /opt/ros/melodic/setup.bash
 roslaunch path_publisher cloud_pose_mapper.launch
 ```
+
 
 Terminal 3:
 
