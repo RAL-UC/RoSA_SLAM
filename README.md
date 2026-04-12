@@ -159,4 +159,17 @@ rosbag play data_pullally_example.bag
 ```
 
 ## 6. Cite
-Nazate-Burgos, P., Torres-Torriti, M., Aguilera-Marinovic, S., Arévalo, T., Huang, S., & Auat Cheein, F. (2025). Robust 2D lidar-based SLAM in arboreal environments without IMU/GNSS. arXiv. arXiv:2505.10847.
+Nazate-Burgos, P., Torres-Torriti, M., Huang, S., & Auat Cheein, F. (2026). **Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust dimensionality reduction. *Computers and Electronics in Agriculture*, vol. 247, 111687, ISSN 0168-1699, https://doi.org/10.1016/j.compag.2026.
+
+```bibtex
+@article{RoSA_SLAM_2026,
+title = {Consistent lidar-only SLAM for legged agricultural robots in arboreal environments via robust dimensionality reduction},
+journal = {Computers and Electronics in Agriculture},
+volume = {247},
+pages = {111687},
+year = {2026},
+issn = {0168-1699},
+doi = {https://doi.org/10.1016/j.compag.2026.111687},
+url = {https://www.sciencedirect.com/science/article/pii/S0168169926002826},
+author = {Paola Nazate-Burgos and Miguel Torres-Torriti and Shoudong Huang and Fernando {Auat Cheein}},
+}
